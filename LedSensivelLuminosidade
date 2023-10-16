@@ -1,0 +1,18 @@
+int luminosidade = 0;
+
+void setup()
+{
+pinMode(A0, INPUT);
+pinMode(LED_BUILTIN, OUTPUT);// LED VERMELHO
+}
+
+void loop()
+{
+luminosidade = analogRead(A0);
+if (luminosidade < 750) {
+digitalWrite(LED_BUILTIN, HIGH); // Liga o LED VERMELHO
+} else {
+digitalWrite(LED_BUILTIN, LOW); // Desliga o LED VERMELHO
+}
+delay(10);
+}
